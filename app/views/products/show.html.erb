@@ -1,2 +1,1 @@
-<% template = Liquid::Template.parse(@template) %>
-<%= template.render(product_details(@product)).html_safe %>
+<%= liquidize @template, 'item' => product_details(@product) %>
